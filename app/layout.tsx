@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Exercise 1',
-  description: 'Exercise: Your First Components',
+  title: 'Exercise 2',
+  description: 'Creating Composable Functionality',
 }
 
 export default function RootLayout({

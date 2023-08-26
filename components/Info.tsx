@@ -1,5 +1,5 @@
 import styles from '@/styles/Comic.module.css'
-export default function Detail({ issue, publishDate, creators }) {
+export default function Info({ issue, publishDate, creators }) {
     return (
         <div>
             <ul className={styles.infoDetail}>

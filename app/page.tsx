@@ -12,12 +12,11 @@ export default function Home() {
 	if (error) return <div>Failed to load </div>
 	if (isLoading) return <div>Loading...</div>
 	if (!data) return null
-	console.log("data",data)
 	
 	return (
 		<main className={styles.main}>
 			<div className={styles.header}>
-				<h1>Exercise 1</h1>
+				<h1>Exercise 2</h1>
 			</div>
 
 
