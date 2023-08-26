@@ -1,20 +1,40 @@
-import '@/styles/globals.css';
+'use client';
+import useSWR from 'swr'
+import styles from '@/styles/Page.module.css'
+import  Comic from '@/components/Comic'
 
-import { Counter } from '@/components/Counter'
-import { Accordion } from '@/components/Accordion'
-import { Input } from '@/components/Input'
+const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Home() {
-  return (
-    <main>
-        <div>
-          <h1>React Exercise 1 - Comic Grid</h1>
-        </div>
-        <div className="App">
-          <Input/>
-          <Counter/>
-          <Accordion/>
-      </div>
-   </main>
-  )
+	const address = '/api';
+	const { data, error, isLoading } = useSWR(address, fetcher);
+
+	if (error) return <div>Failed to load </div>
+	if (isLoading) return <div>Loading...</div>
+	if (!data) return null
+	console.log("data",data)
+	
+	return (
+		<main className={styles.main}>
+			<div className={styles.header}>
+				<h1>Exercise 1</h1>
+			</div>
+
+
+			<ul className={styles.grid} 
+				style={{
+				display: 'grid',
+				gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+				justifyContent: 'center',
+				gap: '16px'
+			}}>
+				{ data.comics.map((comic) => (
+					<Comic 
+						key={comic.id} 
+						comic={comic} 
+					/> 
+				)) }
+			</ul>
+		</main>
+	)
 }
