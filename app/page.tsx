@@ -12,22 +12,15 @@ export default function Home() {
 	if (error) return <div>Failed to load </div>
 	if (isLoading) return <div>Loading...</div>
 	if (!data) return null
-	
+
 	return (
 		<main className={styles.main}>
 			<div className={styles.header}>
 				<h1>Exercise 2</h1>
 			</div>
 
-
-			<ul className={styles.grid} 
-				style={{
-				display: 'grid',
-				gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-				justifyContent: 'center',
-				gap: '16px'
-			}}>
-				{ data.comics.map((comic) => (
+			<ul className={styles.grid}>
+				{ data.map((comic) => (
 					<Comic 
 						key={comic.id} 
 						comic={comic} 
