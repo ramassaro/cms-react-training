@@ -1,19 +1,21 @@
 export const metadata = {
-  title: 'Exercise 2',
-  description: 'Creating Composable Functionality',
+	title: 'Exercise 4',
+	description: 'Your First Test',
 }
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode
+	children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <head>
-      <script src="https://kit.fontawesome.com/cab80c4382.js" crossorigin="anonymous"></script>
-      </head>
-      <body>{children}</body>
-    </html>
-  )
+	return (
+		<html lang="en">
+			<head>
+				<script src="https://kit.fontawesome.com/cab80c4382.js" crossOrigin="anonymous"></script>
+			</head>
+			<body>
+				{children}
+			</body>
+		</html>
+	)
 }
