@@ -5,12 +5,12 @@
 .grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    justify-content: center;
+    justify-content: left;
     position: relative;
     gap: 16px;
-    margin: 16px auto;
+    margin: 0;
     padding: 0;
-    max-width: 1200px;
+    max-width: 995px;
 }
 
 /* Pagination */
@@ -30,10 +30,11 @@
 .paginationWrapper .button {
     width: 35px;
     height: 35px;
-    color: var(--color-light);
-    background: var(--background-dark);
+    color: #F8F8F2;
+    background: #222;
     border-radius: 100%;
     cursor: pointer;
+    border: #222 2px solid;
 }
 .paginationWrapper .icon {
     position: relative;
@@ -52,6 +53,36 @@
 .paginationWrapper .disabled {
     opacity: 0.5;
     pointer-events: none;
+}
+
+.filtersWrapper {
+    margin-bottom: 40px;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    font: normal normal bold 14px/16px Montserrat;
+    background: #222;
+    color: #F8F8F2;
+}
+
+.filtersLabel {
+    padding-right: 10px;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+}
+
+.filters select {
+    padding: 7px 10px;
+    margin: 0 8px;
+    min-width: 245px;
+    font: normal normal normal 16px/16px Karla;
+    color: #F8F8F2;
+    border: 1px solid #F8F8F2;
+    background: #222;
+    border-radius: 3px;
 }
 
 .loadingStatus {
