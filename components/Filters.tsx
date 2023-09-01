@@ -28,6 +28,7 @@ export default function Filters  ({ characters, creators }) {
                     <option value="1009368">Iron Man</option>
                     <option value="1009220">Captain America</option>
                     <option value="1009664">Thor</option>
+                    <option value="1009610">Spider Man</option>
                     <option value="1009268">Deadpool</option>
                     <option value="1009562">Scarlet Witch</option>
                     <option value="1009189">Black Widow</option>
@@ -37,6 +38,8 @@ export default function Filters  ({ characters, creators }) {
                     <option value="1009262">Daredevil</option>
                     <option value="1009313">Gambit</option>
                     <option value="1009180">Beta-Ray Bill</option>
+                    <option value="1010744">Rocket Raccoon</option>
+                    <option value="1010743">Groot</option>
                 </select>
             </div>
             <div className={styles.filters}>

@@ -54,13 +54,13 @@
 .app .content{
     width: fit-content;
     max-width: 1440px;
+    padding: 20px;
     min-height: 300px;
     position: relative;
     display: flex;
     align-items: flex-start;
     gap: 32px;
     margin: auto;
-    padding: 0;
 }
 
 .intro {
@@ -95,15 +95,16 @@
     font: normal normal normal 20px/32px Montserrat;
   }
 
-   /* Favorites */
-   .favorites {
+/* Favorites */
+.favorites {
     position: sticky;
     top: 0;
     padding: 30px;
     background: #222;
     color: #F8F8F2;
     font-family: 'Karla', sans-serif;
-    min-width:265px;
+    max-width:265px;
+    width: 30%;
   }
   .favorites .heading {
     margin-bottom: 20px;
@@ -157,6 +158,61 @@
     cursor: pointer;
 }
 
+/* Navigation */
+.navigationWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 20px 60px;
+    z-index: 10;
+}
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation .links {
+    display: flex;
+    justify-content: flex-right;
+    gap: 10px;
+    
+}
+
+.navigation .links > a {
+    color: #F8F8F2;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:Montserrat;
+    text-decoration: none;
+    padding: 0px 10px;
+    text-shadow: 0px 0px 3px rgb(0 0 0 / 75%);
+}
+navigation .count {
+    font-weight: normal;
+}
+
+.footer{
+    width: 100%;
+    min-height: 220px;
+    background: #222222 0% 0% no-repeat padding-box;
+}
+
+.footerLogo{
+    margin: 0 auto;
+    width: 108px;
+    padding-top: 32px;
+}
+.footerCopy span{
+    text-align: center;
+    font: normal normal normal 14px/16px Montserrat;
+    letter-spacing: 0px;
+    color: #F8F8F2;
+    margin: 0 auto;
+    display: block;
+    padding-top: 32px;
+}
 
 
 

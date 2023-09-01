@@ -1,6 +1,7 @@
 'use client';
 import styles from '@/styles/Layout.module.css';
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import Favorites from '@/components/Favorites';
 import {FavoriteType} from '@/components/Favorites';
 import React, { useState, useEffect, createContext, useContext } from 'react'
@@ -35,11 +36,13 @@ export default function RootLayout({
 				<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
 			</head>
 			<body className={styles.app}>
-				<Header  
-					src="/hero-photo.png"
-					alt="Header Image of Multiple Comic Books"
-					title="Comic Closet"
-				/>
+				<FavoritesContext.Provider value={FavoriteValue}>
+					<Header  
+						src="/hero-photo.png"
+						alt="Header Image of Multiple Comic Books"
+						title="Comic Closet"
+					/>
+				</FavoritesContext.Provider>
 				<section className={styles.intro}>
 					<h2 className={styles.introTitle}>Coming Out Daily</h2>
 					<span className={styles.introSubtitle}>New Comics!</span> 
@@ -51,9 +54,7 @@ export default function RootLayout({
 						<Favorites/>
 					</section>
 				</FavoritesContext.Provider>
-				<footer className={styles.footer}>
-					<span>footer</span>
-				</footer>
+				<Footer/>
 			</body>
 		</html>
 	)
