@@ -10,12 +10,12 @@ export default function Item({ data }) {
                 crossOrigin="anonymous"
                 src={data.thumbnail.path+'.'+data.thumbnail.extension}
                 alt={data.title}
-                width={180}
-                height={274}
+                width={183}
+                height={276}
             />
  
             <div className={styles.info}>
-                <FavoriteButton />
+                <FavoriteButton data={data} />
                 <div className={styles.infoInner}>
                     <h3 className={styles.title} data-testid="title">{data.title}</h3>
                     <div>

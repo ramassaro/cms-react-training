@@ -21,9 +21,10 @@ export default function Home() {
 	if (error) return <div className={styles.failedStatus}>Failed to load </div>
 	if (isLoading) return <div className={styles.loadingStatus}></div>
 	if (!data) return null;
-
 	const { count, limit, offset, results, total } = data;
 
+	//data loaded now we need to mix in the local storage 'favorite' info ????
+	
 	return (
 		<main className={styles.main}>
 			<Filters characters={characters} creators={creators}/>
@@ -35,7 +36,7 @@ export default function Home() {
 					/> 
 				)) }
 			</ul>
-			<Pagination count={count} limit={limit} offset={offset} total={total}/>
+			<Pagination count={count} limit={limit} offset={offset} total={total}/>	
 		</main>
 	)
 }
