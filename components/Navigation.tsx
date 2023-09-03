@@ -20,7 +20,7 @@ export const Navigation = () => {
                 </Link>
                 <div className={styles.links}>
                     <Link href="/#Favorites">
-                        <i className="fas fa-bolt"></i> My Favorites <span className={styles.count}>{`(${favorites.length})`}</span>
+                        <i className="fas fa-bolt"></i> <span className={styles.linkName}>My Favorites</span> <span className={styles.count}>{`(${favorites.length})`}</span>
                     </Link>
                 </div>
                 

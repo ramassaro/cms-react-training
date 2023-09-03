@@ -104,4 +104,12 @@
     100% { transform: rotate(360deg); }
   }
 
+  
+@media screen and (max-width: 1024px) {
+    .main {
+        max-width: auto;
+        width: 100%;
+    }
+}
+
  

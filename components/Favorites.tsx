@@ -18,7 +18,6 @@ export type FavoriteType = {
 
 export default function Favorites() {
     const {favorites, setFavorites} = useFavorites();
-    console.log("favorites list area", favorites);
     useEffect(() => {
         console.log("fav list area effect");
         

@@ -14,7 +14,7 @@ export default function Filters  ({ characters, creators }) {
             <span className={styles.filtersLabel}>Filter By:</span>
             <div className={styles.filters}>
                 <select className={styles.filtersSelect}
-                    value={characters}
+                    value={characters ? characters : ""}
                     onChange={(e) => {
                         const current = new URLSearchParams(Array.from(searchParams.entries())); 
                         current.set('characters', e.target.value);
@@ -44,7 +44,7 @@ export default function Filters  ({ characters, creators }) {
             </div>
             <div className={styles.filters}>
                 <select className={styles.filtersSelect}
-                    value={creators}
+                    value={creators ? creators : ""}
                     onChange={(e) => {
                         const current = new URLSearchParams(Array.from(searchParams.entries())); 
                         current.set('creators', e.target.value);
