@@ -169,8 +169,9 @@
     top: 0;
     left: 0;
     right: 0;
-    margin: 20px 60px;
+    margin: 20px auto;
     z-index: 10;
+    max-width: 1300px;
 }
 .navigation {
     display: flex;

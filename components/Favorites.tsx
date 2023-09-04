@@ -23,12 +23,14 @@ export default function Favorites() {
         const onResize = () => {
             let width = window.innerWidth;
             const favoritesGroup = document.getElementById('favoritesGroup');
+            const filtersGroup = document.getElementById('filtersGroup');
             if(width>1024) {
                 favoritesGroup.style.display = "block";
+                filtersGroup.style.display = "block";
+            }else{
+                favoritesGroup.style.display = "none";
+                filtersGroup.style.display = "none";
             }
-            // }else{
-            //     favoritesGroup.style.display = "none";
-            // }
         }
         window.addEventListener('resize', onResize);
       }, []) // no dependencies
