@@ -18,12 +18,23 @@ export type FavoriteType = {
 
 export default function Favorites() {
     const {favorites, setFavorites} = useFavorites();
+
     useEffect(() => {
-        console.log("fav list area effect");
-        
-    }, [favorites]);
+        const onResize = () => {
+            let width = window.innerWidth;
+            const favoritesGroup = document.getElementById('favoritesGroup');
+            if(width>1024) {
+                favoritesGroup.style.display = "block";
+            }
+            // }else{
+            //     favoritesGroup.style.display = "none";
+            // }
+        }
+        window.addEventListener('resize', onResize);
+      }, []) // no dependencies
+
 	return (
-		<section id="Favorites" className={styles.favorites}>
+		<section id='favoritesGroup' className={styles.favorites}>
 			<h3 data-id = '2' className={styles.heading}>{`Favorites `}</h3>
 			{ favorites.length > 0 && 
 				favorites.map((comic) => {
@@ -55,7 +66,5 @@ export default function Favorites() {
 			}
 		</section>
 	)
-
-
 }
 

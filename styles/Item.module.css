@@ -6,6 +6,11 @@
     flex-direction: column;
 }
 
+.item .image{
+    position: relative;
+    text-align: center;
+}
+
 .item img {
     max-width: 183px;
     min-height: 276px;
@@ -50,7 +55,8 @@
 
 .item .favoriteButton {
     position: absolute;
-    top: -15px;
+    bottom: -15px;
+    z-index: 9;
     left: 50%;
     display: inline-flex;
     justify-content: center;
@@ -79,4 +85,38 @@
     top: 1px;
     font-size: 16px;
     font-weight: normal;
+}
+
+@media screen and (max-width: 480px) {
+    .item {
+        flex-direction: row-reverse;
+        width: 90%;
+        margin: 0 auto; 
+        padding: 0;
+        max-width: 480px;
+    }
+    .item .image{
+        width: 42%;
+        text-align: left;
+    }
+    .item img {
+        width: 125px;
+        height: 188px;
+        min-height: 188px;
+    }
+    .item .info {
+        width: 54%;
+        margin: 0;
+        padding: 0;
+    }
+    .item .infoInner {
+        height: auto;
+        padding-top: 0;
+        padding-right: 8px;
+    }
+    .item .favoriteButton {
+        bottom: 50%;
+        left: 0;
+    }
+    
 }

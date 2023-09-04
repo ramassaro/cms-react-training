@@ -25,7 +25,7 @@ export default function Pagination  ({ count, limit, offset, total }) {
                     current.set('offset', (offset).toString());
                     const search = current.toString();
                     const query = search ? `?${search}` : "";
-                    router.push(`/${query}`, undefined, { shallow: true });
+                    router.push(`/${query}`, undefined, { shallow: true, scroll: false });
                 }}
             >
                 <i className={`${styles.icon} fas fa-angle-left`}></i>
@@ -42,7 +42,7 @@ export default function Pagination  ({ count, limit, offset, total }) {
                     current.set('offset', (offset).toString());
                     const search = current.toString();
                     const query = search ? `?${search}` : "";
-                    router.push(`/${query}`, undefined, { shallow: true });
+                    router.push(`/${query}`, undefined, { shallow: true, scroll: false });
                 }}
             >
                 <i className={`${styles.icon} fas fa-angle-right`}></i>

@@ -100,6 +100,7 @@
 
 /* Favorites */
 .favorites {
+    display: block;
     position: sticky;
     top: 0;
     padding: 30px;
@@ -108,6 +109,7 @@
     font-family: 'Karla', sans-serif;
     max-width:265px;
     width: 30%;
+    z-index: 99;
   }
   .favorites .heading {
     margin-bottom: 20px;
@@ -220,7 +222,15 @@ navigation .count {
 @media screen and (max-width: 1024px) {
     .favorites {
         position: absolute;
+        top: 52px;
         display: none;
+        width: 100%;
+        max-width: 307px;
+    }
+    .favoritesGroup{
+        width: 100%;
+        max-width: 307px;
+        z-index: 99;
     }
     .navigationWrapper{
         margin: 20px 20px;
@@ -235,16 +245,35 @@ navigation .count {
     }
 
     .app .header .slideshow .title {
-        font-size: 42px;
         max-width: 320px;
-        width: 100%;
+        width: auto;
         text-align: center;
+        font: normal normal 900 27px/33px Montserrat;
+        letter-spacing: 0px;
+        color: #F8F8F2;
+        text-shadow: 2px 2px 0px #000000;
+        padding: 20px 32px;
+        white-space: nowrap;
     }
     .app .header .slideshow img{
         width: 100%;
         height: 400px;
         object-fit: cover;
     }
+    .intro {
+        padding: 0 20px
+    }
+    .intro .introTitle {
+        font: normal normal 900 25px/16px Montserrat;
+    }
+    .intro .introSubtitle {
+        font: normal normal 900 14px/16px Montserrat;
+        top: -14px;
+        left:12px;
+    }
+    .intro p {
+        font: normal normal normal 20px/32px Montserrat;
+      }
 }
 
 

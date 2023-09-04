@@ -6,16 +6,18 @@ import moment from 'moment/moment'
 export default function Item({ data }) {
     return (
         <div className={styles.item}>
-            <Image 
-                crossOrigin="anonymous"
-                src={data.thumbnail.path+'.'+data.thumbnail.extension}
-                alt={data.title}
-                width={183}
-                height={276}
-            />
- 
-            <div className={styles.info}>
+            <div className={styles.image}>
+                <Image 
+                    crossOrigin="anonymous"
+                    src={data.thumbnail.path+'.'+data.thumbnail.extension}
+                    alt={data.title}
+                    width={183}
+                    height={276}
+                />
                 <FavoriteButton data={data} />
+            </div>
+            <div className={styles.info}>
+                
                 <div className={styles.infoInner}>
                     <h3 className={styles.title} data-testid="title">{data.title}</h3>
                     <div>

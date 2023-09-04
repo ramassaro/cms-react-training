@@ -57,13 +57,19 @@
 }
 
 .filtersWrapper {
+    position: relative;
     margin-bottom: 40px;
     padding: 15px 20px;
-    display: flex;
-    align-items: center;
     font: normal normal bold 14px/16px Montserrat;
     background: #222;
     color: #F8F8F2;
+    min-height: 22px;
+}
+
+.filtersGroup{
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .filtersLabel {
@@ -73,6 +79,9 @@
 .filters {
     display: flex;
     gap: 20px;
+}
+.filtersMobileGroup{
+    display: none;
 }
 
 .filters select {
@@ -97,12 +106,15 @@
     width: 32px;
     height: 32px;
     animation: spin 2s linear infinite;
-  }
-  
-  @keyframes spin {
+}
+
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
+}
+.hidden{
+    display: none;
+}
 
   
 @media screen and (max-width: 1024px) {
@@ -110,6 +122,63 @@
         max-width: auto;
         width: 100%;
     }
+    .filtersWrapper {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    .filtersGroup{
+        position: absolute;
+        display: flex;
+        background: #333;
+        padding: 20px;
+        min-height: 300px;
+        z-index: 99;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+        top: 52px;
+        left: 0;
+        display: none;
+        max-width: 327px;
+        width: 100%;
+    }
+    .filtersMobileGroup{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .filtersLabel {
+        padding-right: 10px;
+        font: normal normal 900 25px/30px Montserrat;
+    }
+    .filtersMobileLabel{
+        width: 50%;
+    }
+    .filters {
+        display: flex;
+        gap: 20px;
+    }
+    .filters select {
+        padding: 7px 10px;
+        margin: 0;
+    }
+    .filtersMobileGroup, .filtersMobileGroup a{
+        font: normal normal bold 14px/16px Montserrat;
+        background: #222;
+        color: #F8F8F2;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .grid{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    
+
 }
 
  
