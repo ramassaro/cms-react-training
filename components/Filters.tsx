@@ -29,8 +29,8 @@ export default function Filters  ({ characters, creators }) {
     return (
         <section className={styles.filtersWrapper}>
             <div className={styles.filtersMobileGroup}>
-                <Link className={styles.filtersMobileLabel} href='#' onClick={(e) => showMobileFilters(e)} scroll={false}><span>Filters <i className="fas fa-filter"></i></span></Link>
-                <Link className={styles.FavoritesMobileLabel} href='#' onClick={(e) => showMobileFavorites(e)} scroll={false}><span>Favorites <i className="fa fa-bolt"></i></span></Link>
+                <Link className={styles.filtersMobileLabel} href='#' onClick={(e) => showMobileFilters(e)} scroll={false}><span>Filters <i className="fas fa-filter" aria-hidden></i></span></Link>
+                <Link className={styles.FavoritesMobileLabel} href='#' onClick={(e) => showMobileFavorites(e)} scroll={false}><span>Favorites <i className="fa fa-bolt" aria-hidden></i></span></Link>
             </div>
             <div id='filterGroup' className={styles.filtersGroup} >
                 <span className={styles.filtersLabel}>Filter By:</span>
@@ -51,6 +51,10 @@ export default function Filters  ({ characters, creators }) {
                         <option value="1009220">Captain America</option>
                         <option value="1009664">Thor</option>
                         <option value="1009610">Spider Man</option>
+                        <option value="1009313">Gambit</option>
+                        <option value="1009180">Beta-Ray Bill</option>
+                        <option value="1010744">Rocket Raccoon</option>
+                        <option value="1010743">Groot</option>
                         <option value="1009268">Deadpool</option>
                         <option value="1009562">Scarlet Witch</option>
                         <option value="1009189">Black Widow</option>
@@ -58,10 +62,6 @@ export default function Filters  ({ characters, creators }) {
                         <option value="1010763">Gamora</option>
                         <option value="1009384">Kang</option>
                         <option value="1009262">Daredevil</option>
-                        <option value="1009313">Gambit</option>
-                        <option value="1009180">Beta-Ray Bill</option>
-                        <option value="1010744">Rocket Raccoon</option>
-                        <option value="1010743">Groot</option>
                     </select>
                 </div>
                 <div className={styles.filters}>
@@ -82,7 +82,6 @@ export default function Filters  ({ characters, creators }) {
                         <option value="30">Stan Lee</option>
                         <option value="32">Steve Ditko</option>
                         <option value="196">Jack Kirby</option>
-
                     </select>
                 </div>
             </div>

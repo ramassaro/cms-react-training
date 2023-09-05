@@ -24,6 +24,7 @@ export default function Favorites() {
             let width = window.innerWidth;
             const favoritesGroup = document.getElementById('favoritesGroup');
             const filtersGroup = document.getElementById('filtersGroup');
+            if(!filtersGroup || !favoritesGroup)return;
             if(width>1024) {
                 favoritesGroup.style.display = "block";
                 filtersGroup.style.display = "block";
@@ -37,9 +38,8 @@ export default function Favorites() {
 
 	return (
 		<section id='favoritesGroup' className={styles.favorites}>
-			<h3 data-id = '2' className={styles.heading}>{`Favorites `}</h3>
-			{ favorites.length > 0 && 
-				favorites.map((comic) => {
+			<h3 className={styles.heading}>{`Favorites `}</h3>
+			{ favorites.map((comic) => {
 					return (
 						<div className={styles.item} key={comic.id}>
                             <div className={styles.thumbnail}>
@@ -55,7 +55,7 @@ export default function Favorites() {
                                     title="Remove Favorite"
                                     onClick={() => setFavorites(favorites.filter((val) => val.id !== comic.id)) }
                                 >
-                                    <i className={`${styles.buttonIcon} fas fa-times`}></i>
+                                    <i className={`${styles.buttonIcon} fas fa-times`} aria-hidden></i>
                                 </button>
                             </div>
                             <div className={styles.favInfo}>

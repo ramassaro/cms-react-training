@@ -129,7 +129,7 @@
     .filtersGroup{
         position: absolute;
         display: flex;
-        background: #333;
+        background: #222;
         padding: 20px;
         min-height: 300px;
         z-index: 99;

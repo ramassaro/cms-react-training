@@ -41,7 +41,7 @@ export default function FavoriteButton({data}) {
                 favoritesHandler();
             }}
         >
-            <span><i className="fa fa-bolt"></i></span>
+            <span><i className="fa fa-bolt" aria-hidden></i></span>
         </button>
     )
 }

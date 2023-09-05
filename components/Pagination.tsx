@@ -7,7 +7,6 @@ export default function Pagination  ({ count, limit, offset, total }) {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
-
     const first = offset + 1;
     const last = offset + count;
     const paginationCount = `${first} - ${last} of ${total}`;
@@ -28,7 +27,7 @@ export default function Pagination  ({ count, limit, offset, total }) {
                     router.push(`/${query}`, undefined, { shallow: true, scroll: false });
                 }}
             >
-                <i className={`${styles.icon} fas fa-angle-left`}></i>
+                <i className={`${styles.icon} fas fa-angle-left`} aria-hidden></i>
             </button>
 
             <span className={styles.span}>{paginationCount}</span>
@@ -45,7 +44,7 @@ export default function Pagination  ({ count, limit, offset, total }) {
                     router.push(`/${query}`, undefined, { shallow: true, scroll: false });
                 }}
             >
-                <i className={`${styles.icon} fas fa-angle-right`}></i>
+                <i className={`${styles.icon} fas fa-angle-right`} aria-hidden></i>
             </button>
         </section>
     )

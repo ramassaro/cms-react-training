@@ -22,8 +22,6 @@ export default function Home() {
 	if (isLoading) return <div className={styles.loadingStatus}></div>
 	if (!data) return null;
 	const { count, limit, offset, results, total } = data;
-
-	//data loaded now we need to mix in the local storage 'favorite' info ????
 	
 	return (
 		<main className={styles.main}>
